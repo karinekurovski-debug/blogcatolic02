@@ -1,0 +1,166 @@
+/* Variáveis globais do tema claro */
+:root {
+    --cor-primaria: #183C63;
+    --cor-secundaria: #3782d2;
+    --cor-fundo: #ffffff;
+    --cor-texto: #151428;
+    --cor-contraste: #f3eef7;
+    --cor-botao: #f9f9f9;
+    --fonte-texto: 'Segoe UI', sans-serif;
+}
+
+/* Transição suave de cores ao alternar o tema */
+* {
+    transition: background-color 0.3s ease;
+}
+
+/* Redefinição das variáveis para o modo escuro */
+.tema-escuro {
+    --cor-primaria: #c9e3ff;
+    --cor-fundo: #151428;
+    --cor-texto: #ffffff;
+    --cor-contraste: #f3eef7;
+    --cor-secundaria: #3782d2;
+}
+
+/* Ajuste de visibilidade do botão flutuante no modo escuro */
+.tema-escuro .btn-tema-escuro {
+    background-color: var(--cor-secundaria);
+}
+
+/* Ajustes específicos de elementos no modo escuro */
+.tema-escuro a {
+    color: var(--cor-secundaria);
+}
+
+.tema-escuro p {
+    color: var(--cor-texto);
+}
+
+.tema-escuro header p {
+    color: var(--cor-contraste);
+}
+
+/* Configuração geral do body */
+body {
+    max-width: 100vw;
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.author-header {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Container de artigos */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--cor-fundo);
+}
+
+/* Estilo individual dos posts com efeito de sombra */
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 16px;
+    gap: 16px;
+    padding: 16px;
+    flex: 1 1 25%;
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.post-title {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.post-author {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.post-content {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.artigo-fonte {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.artigo-fonte a {
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.reactions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: var(--cor-botao);
+    border: 1px solid var(--cor-primaria);
+    border-radius: 4px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Botão Flutuante de Tema */
+.btn-tema-escuro {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    font-size: 32px;
+    padding: 12px;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
